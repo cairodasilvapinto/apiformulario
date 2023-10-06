@@ -16,6 +16,6 @@ export const AppDataSource = new DataSource({
     // entities: [`../../**/entities/*.{ts,js}`],
     // migrations: [`../../**/migrations/*.{ts,js}`],
 
-    entities: ["C:/DEV/API/src/modules/users/entities/*.{ts,js}"],
-    migrations: ["C:/DEV/API/src/database/migrations/*.{ts,js}"],
+    entities: ["C:/Users/cairo.silva/Desktop/apiformulario/src/modules/users/entities/*.{ts,js}"],
+    migrations: ["C:/Users/cairo.silva/Desktop/apiformulario/src/database/migrations/*.{ts,js}"],
 });
