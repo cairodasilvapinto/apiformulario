@@ -19,3 +19,4 @@ export const AppDataSource = new DataSource({
     entities: ["C:/Users/cairo.silva/Desktop/apiformulario/src/modules/users/entities/*.{ts,js}"],
     migrations: ["C:/Users/cairo.silva/Desktop/apiformulario/src/database/migrations/*.{ts,js}"],
 });
+// faz a coneccao com o banco de dados
