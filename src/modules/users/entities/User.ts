@@ -1,7 +1,7 @@
 import { Column, CreateDateColumn, Entity, OneToMany, PrimaryColumn } from "typeorm";
 import { v4 as uuidv4 } from "uuid";
 import { Answer } from "./Answer";
-import { Question } from "./Question";
+import { Form } from "./Form";
 
 @Entity("users")
 export class User {
@@ -43,11 +43,7 @@ export class User {
             this.id = uuidv4();
         }
     }
-    
-    // um usuário pode ter várias respostas, mas uma resposta pode estar associada a apenas um usuário.
-    @OneToMany(() => Answer, (answer) => answer.user)
-    answers: Answer[];
 
-    @OneToMany(() => Question, (question) => question.user)
-    questions: Question[];
+    @OneToMany(() => Form, (form) => form.user)
+    forms: Form[];
 }

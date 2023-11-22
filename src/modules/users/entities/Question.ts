@@ -20,9 +20,5 @@ export class Question {
             this.id = uuidv4();
         }
     }
-    @ManyToOne( () => User, (user) => user.questions)
-    user: User;
 
-    @OneToMany( () => Answer , (answer) => answer.question)
-    answer: Answer[];
 }

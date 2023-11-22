@@ -1,7 +1,6 @@
-import { Entity, Column, CreateDateColumn, PrimaryColumn, ManyToOne, ManyToMany } from "typeorm";
+import { Entity, Column, CreateDateColumn, PrimaryColumn, ManyToMany, JoinTable } from "typeorm";
 import { v4 as uuidv4 } from "uuid";
-import { User } from "./User";
-import { Question } from "./Question";
+import { Form } from "./Form";
 
 @Entity("answers")
 export class Answer {
@@ -13,17 +12,14 @@ export class Answer {
 
     @CreateDateColumn()
     created_at: Date;
-    questions: any;
+
+    @ManyToMany(() => Form)
+    @JoinTable()
+    forms: Form[];
 
     constructor() {
         if (!this.id) {
             this.id = uuidv4();
         }
     }
-    // @ManyToOne um usuário pode ter várias respostas e uma resposta pode ser associada a um usuário.
-    @ManyToOne( () => User, (user) => user.answers)
-    user: User;
-
-    @ManyToOne( () => Question , (question) => question.answers)
-    question: Question;
 }

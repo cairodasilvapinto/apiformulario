@@ -22,7 +22,8 @@ export class Profile {
         }
     }
     // @ManyToMany um perfil pode ser associado a vários usuários e um usuário pode estar associado a vários perfis.
-    @ManyToMany(() => User)
-    @JoinTable()
-    users: User[];
+    // @ManyToMany(() => User)
+    // @JoinTable()
+    // users: User[];
+
 }
