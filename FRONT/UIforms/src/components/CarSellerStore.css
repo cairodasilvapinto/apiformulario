@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  width: 500px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-container label {
+  font-weight: bold;
+  color: #555;
+}
+
+.form-container input,
+.form-container textarea,
+.form-container select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.form-container input[type="number"] {
+  width: 60px;
+}
+
+.form-container table {
+  width: 100%;
+}
+
+.form-container td {
+  padding: 10px 0;
+}
+
+.form-container td:first-child {
+  width: 80%;
+}
+
+.car-image {
+  width: 400px;
+  object-fit: contain;
+}
