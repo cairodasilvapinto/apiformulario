@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "./CarSellerStore.css";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const CarSellerStore = () => {
   const [cart, setCart] = useState([]);
@@ -44,7 +44,9 @@ const CarSellerStore = () => {
       <ul>
         {cars.map((car) => (
           <li key={car.id}>
-            <img className="car-image" src={car.image} alt={`${car.brand} ${car.model}`} />
+            <Link to={`/car/${car.id}`}>
+              <img className="car-image" src={car.image} alt={`${car.brand} ${car.model}`} />
+            </Link>
             <h3>{car.brand} {car.model}</h3>
             <p>Price: ${car.price}</p>
             <button onClick={() => addToCart(car)}>Add to Cart</button>

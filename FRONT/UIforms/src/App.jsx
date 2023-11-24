@@ -1,12 +1,16 @@
 import "./App.css";
-import CarSellerStore from "./components/CarSellerStore";
+import React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import CarSellerStore from "./components/CarSellerStore.jsx";
+import CarDetails from "./components/CarDetails";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <CarSellerStore/>
-    </div>
+    <Router>
+      <Route path="/" exact component={CarSellerStore} />
+      <Route path="/car/:id" component={CarDetails} />
+    </Router>
   );
-}
+};
 
 export default App;
